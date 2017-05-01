@@ -1,5 +1,4 @@
 [![codecov](https://codecov.io/gh/brainicorn/goblex/branch/master/graph/badge.svg)](https://codecov.io/gh/brainicorn/goblex)
-
 [![Go Report Card](https://goreportcard.com/badge/github.com/brainicorn/goblex)](https://goreportcard.com/report/github.com/brainicorn/goblex)
 
 # goblex #
