@@ -321,7 +321,7 @@ func (lxr *Lexer) SkipCurrentToken(clearPrevious bool) bool {
 	lxr.enterDebug("Skip Current Token")
 	lxr.logDebug("checking lastKnowToken %q", lxr.lastKnownToken)
 	gotLastKnown := lxr.CurrentTokenIs(lxr.lastKnownToken)
-	lxr.logDebug("got lastKnownToken? ", gotLastKnown)
+	lxr.logDebug("got lastKnownToken? %t", gotLastKnown)
 	lxr.logDebug("lastKnowToken %q", lxr.lastKnownToken)
 	if lxr.lastKnownToken == "" || !gotLastKnown || lxr.currentRune == RuneEOF {
 		lxr.logDebug("last known token not found, returning")
