@@ -1,4 +1,4 @@
-![Build Status](https://github.com/brainicorn/goblex/actions/workflows/build.yaml/badge.svg)
+[![Build Status](https://github.com/brainicorn/goblex/actions/workflows/build.yaml/badge.svg)](https://github.com/brainicorn/goblex/actions/workflows)
 [![codecov](https://codecov.io/gh/brainicorn/goblex/branch/main/graph/badge.svg?token=JEzGtB10Aj)](https://codecov.io/gh/brainicorn/goblex)
 [![Go Report Card](https://goreportcard.com/badge/github.com/brainicorn/goblex)](https://goreportcard.com/report/github.com/brainicorn/goblex)
 [![GoDoc](https://godoc.org/github.com/brainicorn/goblex?status.svg)](https://godoc.org/github.com/brainicorn/goblex)
