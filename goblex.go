@@ -109,7 +109,7 @@ func (lxr *Lexer) NextEmittedToken() Token {
 			if lxr.state != nil {
 				lxr.state = lxr.state(lxr)
 			} else {
-				ioutil.ReadAll(lxr.inputBuffer)
+				_, _ = ioutil.ReadAll(lxr.inputBuffer)
 				lxr.currentRune = RuneEOF
 				lxr.logDebug("sending tokenEOF")
 				lxr.exitDebug("NextEmittedToken")
@@ -415,11 +415,7 @@ func (lxr *Lexer) Errorf(format string, args ...interface{}) LexFn {
 
 // IsEOF returns the true/false if the lexer is at the end of the input stream.
 func (lxr *Lexer) IsEOF() bool {
-	if lxr.currentRune == RuneEOF {
-		return true
-	}
-
-	return false
+	return lxr.currentRune == RuneEOF
 }
 
 // EatWhitespace is effectively an LTrim in that it reads and discards all whitespace starting with
@@ -537,6 +533,7 @@ func (lxr *Lexer) exitDebug(format string, a ...interface{}) {
 		for i := 0; i < lxr.logIndent; i++ {
 			fmt.Print("    | ")
 		}
+		fmt.Printf(format, a...)
 		fmt.Print("end\n")
 		lxr.logIndent--
 	}
