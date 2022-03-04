@@ -1,4 +1,4 @@
-feature: ['feature/**', 'feat/**']
-fix: fix/**
+feature: ["feature/**", "feat/**"]
+fix: ["fix/**", "bugfix/**"]
 chore: chore/**
 release: release/**
